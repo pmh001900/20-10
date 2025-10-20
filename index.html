@@ -63,8 +63,13 @@
       }
 
       @keyframes subtlePulse {
-        0%, 100% { opacity: 0.4; }
-        50% { opacity: 0.6; }
+        0%,
+        100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.6;
+        }
       }
 
       canvas {
@@ -91,9 +96,13 @@
         z-index: 2;
       }
 
-      .hidden { display: none !important; }
+      .hidden {
+        display: none !important;
+      }
 
-      #page-welcome { z-index: 10; }
+      #page-welcome {
+        z-index: 10;
+      }
 
       .title-box {
         background: rgba(255, 255, 255, 0.95);
@@ -110,13 +119,26 @@
       }
 
       @keyframes fadeInBloom {
-        from { opacity: 0; transform: scale(0.7) rotate(2deg); }
-        to { opacity: 1; transform: scale(1) rotate(0deg); }
+        from {
+          opacity: 0;
+          transform: scale(0.7) rotate(2deg);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1) rotate(0deg);
+        }
       }
 
       @keyframes cardGlow {
-        0%, 100% { box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.2); }
-        50% { box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4), inset 0 0 15px rgba(255, 255, 255, 0.4); }
+        0%,
+        100% {
+          box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3),
+            inset 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        50% {
+          box-shadow: 0 20px 80px rgba(0, 0, 0, 0.4),
+            inset 0 0 15px rgba(255, 255, 255, 0.4);
+        }
       }
 
       h1 {
@@ -129,8 +151,12 @@
       }
 
       @keyframes glowText {
-        from { text-shadow: 0 2px 10px rgba(255, 111, 145, 0.5); }
-        to { text-shadow: 0 4px 20px rgba(216, 191, 216, 0.7); }
+        from {
+          text-shadow: 0 2px 10px rgba(255, 111, 145, 0.5);
+        }
+        to {
+          text-shadow: 0 4px 20px rgba(216, 191, 216, 0.7);
+        }
       }
 
       p.subtitle {
@@ -141,12 +167,22 @@
       }
 
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
 
       .btn {
-        background: linear-gradient(45deg, var(--color-secondary), var(--color-primary));
+        background: linear-gradient(
+          45deg,
+          var(--color-secondary),
+          var(--color-primary)
+        );
         color: white;
         border: none;
         padding: 12px 35px;
@@ -167,11 +203,18 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.4),
+          transparent
+        );
         transition: left 0.5s ease;
       }
 
-      .btn:hover::before { left: 100%; }
+      .btn:hover::before {
+        left: 100%;
+      }
       .btn:hover {
         transform: scale(1.1) translateY(-3px);
         box-shadow: 0 10px 25px rgba(216, 191, 216, 0.7);
@@ -180,7 +223,9 @@
         outline: 2px solid var(--color-primary);
         outline-offset: 3px;
       }
-      .btn:active { transform: scale(0.95); }
+      .btn:active {
+        transform: scale(0.95);
+      }
 
       #page-message {
         z-index: 5;
@@ -237,23 +282,40 @@
       }
 
       @media (max-width: 600px) {
-        .title-box { padding: 20px 30px; }
-        .btn { padding: 10px 25px; font-size: 1em; }
-        #page-message { padding: 20px; height: 90%; }
-        h1 { font-size: clamp(2em, 6vw, 3em); }
+        .title-box {
+          padding: 20px 30px;
+        }
+        .btn {
+          padding: 10px 25px;
+          font-size: 1em;
+        }
+        #page-message {
+          padding: 20px;
+          height: 90%;
+        }
+        h1 {
+          font-size: clamp(2em, 6vw, 3em);
+        }
       }
     </style>
     <script>
       const config = {
         message: `
-To ĐNT (aka Định and Trang),
+To Bro - my absolute bestie legend!
 
-On this vibrant Vietnam Women’s Day, October 20th, I celebrate you as a resilient blossom, thriving with photosynthetic vigor under life’s radiant sun. Never cease believing in your adaptive potential, for you possess the evolutionary strength to cultivate extraordinary achievements. May you always radiate energy, continue to bloom brilliantly, and advance steadfastly along your chosen ecological path. Trust in your unique genotype—go forth and flourish!
+Happy Vietnam Women's Day 20/10!
 
-Thrive always,
-Your (as you call)s.
+Wishing Bro a Women's Day filled with pure joy, meaningful moments, 
+and the most beautiful memories.
+
+May Bro always stay cheerful, lucky, smiling every day - never tears.
+May Bro grow more radiant, brilliant, with a life overflowing 
+with happiness that's all yours.
+
+Be strong, trust yourself, do your best,
+Your Bro.
 `,
-        signature: 'Happy Women\'s Day'
+        signature: "Happy Women's Day",
       };
 
       class FireworkManager {
@@ -261,17 +323,17 @@ Your (as you call)s.
           this.maxFireworks = maxFireworks;
           this.fireworks = [];
           this.colors = [
-            '#ffb6c1', // Pink
-            '#ffffe0', // Light yellow
-            '#e6e6fa', // Lavender
-            '#ff0000', // Red
-            '#00b7eb'  // Blue
+            "#ffb6c1", // Pink
+            "#ffffe0", // Light yellow
+            "#e6e6fa", // Lavender
+            "#ff0000", // Red
+            "#00b7eb", // Blue
           ];
-          this.canvas = document.createElement('canvas');
-          this.ctx = this.canvas.getContext('2d');
+          this.canvas = document.createElement("canvas");
+          this.ctx = this.canvas.getContext("2d");
           document.body.appendChild(this.canvas);
           this.resizeCanvas();
-          window.addEventListener('resize', () => this.resizeCanvas());
+          window.addEventListener("resize", () => this.resizeCanvas());
           this.animateFireworks();
         }
 
@@ -283,25 +345,30 @@ Your (as you call)s.
         createFirework() {
           const x = Math.random() * this.canvas.width;
           const y = this.canvas.height;
-          const targetY = Math.random() * this.canvas.height * 0.6 + this.canvas.height * 0.2;
+          const targetY =
+            Math.random() * this.canvas.height * 0.6 + this.canvas.height * 0.2;
           const particles = Math.floor(Math.random() * 5 + 10); // 10-15 particles
-          const color = this.colors[Math.floor(Math.random() * this.colors.length)];
+          const color =
+            this.colors[Math.floor(Math.random() * this.colors.length)];
           return {
-            x, y,
+            x,
+            y,
             targetY,
-            particles: Array(particles).fill().map(() => ({
-              x: 0,
-              y: 0,
-              angle: Math.random() * Math.PI * 2,
-              speed: Math.random() * 3 + 2, // 2-5px/frame
-              size: Math.random() * 3 + 3, // 3-6px
-              alpha: 1
-            })),
+            particles: Array(particles)
+              .fill()
+              .map(() => ({
+                x: 0,
+                y: 0,
+                angle: Math.random() * Math.PI * 2,
+                speed: Math.random() * 3 + 2, // 2-5px/frame
+                size: Math.random() * 3 + 3, // 3-6px
+                alpha: 1,
+              })),
             color,
-            phase: 'launch', // launch -> explode -> fade
+            phase: "launch", // launch -> explode -> fade
             launchTime: 1000, // 1s to reach target
             explodeTime: Math.random() * 1000 + 1000, // 1-2s explosion
-            currentTime: 0
+            currentTime: 0,
           };
         }
 
@@ -312,22 +379,24 @@ Your (as you call)s.
               this.fireworks.push(this.createFirework());
             }
             this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-            this.fireworks = this.fireworks.filter(firework => {
+            this.fireworks = this.fireworks.filter((firework) => {
               firework.currentTime += 16; // Approx 60fps
-              if (firework.phase === 'launch') {
+              if (firework.phase === "launch") {
                 const progress = firework.currentTime / firework.launchTime;
-                firework.y = this.canvas.height - (this.canvas.height - firework.targetY) * progress;
+                firework.y =
+                  this.canvas.height -
+                  (this.canvas.height - firework.targetY) * progress;
                 if (firework.currentTime >= firework.launchTime) {
-                  firework.phase = 'explode';
+                  firework.phase = "explode";
                   firework.currentTime = 0;
-                  firework.particles.forEach(p => {
+                  firework.particles.forEach((p) => {
                     p.x = firework.x;
                     p.y = firework.targetY;
                   });
                 }
-              } else if (firework.phase === 'explode') {
+              } else if (firework.phase === "explode") {
                 const progress = firework.currentTime / firework.explodeTime;
-                firework.particles.forEach(p => {
+                firework.particles.forEach((p) => {
                   p.x += Math.cos(p.angle) * p.speed;
                   p.y += Math.sin(p.angle) * p.speed + 0.05; // Gravity effect
                   p.alpha = 1 - progress;
@@ -337,16 +406,23 @@ Your (as you call)s.
                 }
               }
               this.ctx.beginPath();
-              if (firework.phase === 'launch') {
+              if (firework.phase === "launch") {
                 this.ctx.fillStyle = firework.color;
                 this.ctx.arc(firework.x, firework.y, 3, 0, Math.PI * 2);
                 this.ctx.fill();
               } else {
-                firework.particles.forEach(p => {
+                firework.particles.forEach((p) => {
                   this.ctx.globalAlpha = p.alpha;
-                  const gradient = this.ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size);
+                  const gradient = this.ctx.createRadialGradient(
+                    p.x,
+                    p.y,
+                    0,
+                    p.x,
+                    p.y,
+                    p.size
+                  );
                   gradient.addColorStop(0, firework.color);
-                  gradient.addColorStop(1, 'transparent');
+                  gradient.addColorStop(1, "transparent");
                   this.ctx.fillStyle = gradient;
                   this.ctx.beginPath();
                   this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
@@ -380,7 +456,9 @@ Your (as you call)s.
         }
 
         bindEvents() {
-          this.viewMessageBtn.addEventListener("click", () => this.showMessagePage());
+          this.viewMessageBtn.addEventListener("click", () =>
+            this.showMessagePage()
+          );
           this.backBtn.addEventListener("click", () => this.showWelcomePage());
           this.viewMessageBtn.addEventListener("keypress", (e) => {
             if (e.key === "Enter") this.showMessagePage();
@@ -425,16 +503,30 @@ Your (as you call)s.
     </script>
   </head>
   <body>
-    <main id="page-welcome" class="page" role="main" aria-label="Women's Day Welcome Page">
+    <main
+      id="page-welcome"
+      class="page"
+      role="main"
+      aria-label="Women's Day Welcome Page"
+    >
       <div class="title-box">
         <h1>Happy Women's Day</h1>
-        <p class="subtitle">October 20th - To Precious Sister</p>
-        <button id="view-message-btn" class="btn" aria-label="View personal message">
+        <p class="subtitle">October 20th - To My Bro</p>
+        <button
+          id="view-message-btn"
+          class="btn"
+          aria-label="View personal message"
+        >
           Unveil Your Message
         </button>
       </div>
     </main>
-    <main id="page-message" class="page hidden" role="main" aria-label="Personal Message Page">
+    <main
+      id="page-message"
+      class="page hidden"
+      role="main"
+      aria-label="Personal Message Page"
+    >
       <h2 class="message-header">A Heartfelt Letter to you</h2>
       <div id="message-content"></div>
       <div id="message-signature"></div>
@@ -444,4 +536,3 @@ Your (as you call)s.
     </main>
   </body>
 </html>
-
